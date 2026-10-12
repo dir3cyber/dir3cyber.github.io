@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-N+0zHo5uthUzReQl0HGNAmcVYP+ZTHZSGF3tbaiaHIw='; style-src 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#0E4D3A">
+<link rel="canonical" href="https://dir3cyber.com/">
+<link rel="alternate" hreflang="ar" href="https://dir3cyber.com/">
+<link rel="alternate" hreflang="en" href="https://dir3cyber.com/?lang=en">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/reem-kufi-arabic-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/ibm-plex-sans-arabic-arabic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<title>درع للامتثال السيبراني</title>
+<meta name="description" content="درع للامتثال السيبراني: نجهز المنشآت السعودية الصغيرة والمتوسطة لنظام حماية البيانات الشخصية والضوابط الأساسية للأمن السيبراني.">
+<style>
+@font-face{font-family:'Reem Kufi';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/reem-kufi-arabic-700-normal.woff2) format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC}
+@font-face{font-family:'Reem Kufi';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/reem-kufi-latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/ibm-plex-sans-arabic-arabic-400-normal.woff2) format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC}
+@font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/ibm-plex-sans-arabic-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/ibm-plex-sans-arabic-arabic-600-normal.woff2) format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC}
+@font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/ibm-plex-sans-arabic-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/ibm-plex-sans-arabic-arabic-700-normal.woff2) format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC}
+@font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/ibm-plex-sans-arabic-latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+/* Layout: RTL single column. Najdi crenellation band on top, Sadu dividers between sections, readiness sheet in hero */
+:root{
+  --bg:#F5EDE0; --surface:#FFFBF4; --fg:#1C1F1D; --muted:#5E5242; --line:#DCCBB1;
+  --ink:#0E4D3A; --ink-soft:#E5ECDF; --clay:#B8865B; --sand:#EADBC4; --sadu:#9E2B25;
+  --ok:#2F6B45; --warn:#9A6A12; --gap:#9E2B25; --on-ink:#F5EDE0;
+  --display:"Reem Kufi","IBM Plex Sans Arabic",Tahoma,sans-serif;
+  --body:"IBM Plex Sans Arabic",Tahoma,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#13140F; --surface:#1C1D17; --fg:#EFE6D8; --muted:#B9AC98; --line:#34322A;
+  --ink:#6FBF98; --ink-soft:#1F2A22; --clay:#D3A57A; --sand:#3A3428; --sadu:#E07A6E;
+  --ok:#7CC796; --warn:#E0B65A; --gap:#E88A7E; --on-ink:#0F1A15; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#13140F; --surface:#1C1D17; --fg:#EFE6D8; --muted:#B9AC98; --line:#34322A;
+  --ink:#6FBF98; --ink-soft:#1F2A22; --clay:#D3A57A; --sand:#3A3428; --sadu:#E07A6E;
+  --ok:#7CC796; --warn:#E0B65A; --gap:#E88A7E; --on-ink:#0F1A15; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:1.0625rem;line-height:1.8}
+[dir="ltr"] body{line-height:1.7}
+.wrap{max-width:68rem;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
+h1,h2,h3{font-family:var(--display);line-height:1.35;text-wrap:balance;margin:0;font-weight:700}
+p{margin:0}
+a{color:var(--ink)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--clay);outline-offset:3px;border-radius:4px}
+.eyebrow{font-size:.9rem;color:var(--sadu);font-weight:600;letter-spacing:.02em}
+
+/* Najdi crenellation band */
+.najdi{height:22px;background:
+  linear-gradient(135deg,var(--bg) 25%,transparent 25%) 0 0/24px 22px repeat-x,
+  linear-gradient(225deg,var(--bg) 25%,transparent 25%) 0 0/24px 22px repeat-x,
+  var(--ink)}
+/* Sadu divider */
+.sadu{height:14px;background:
+  linear-gradient(135deg,var(--sand) 25%,transparent 25%) 0 0/20px 14px repeat-x,
+  linear-gradient(225deg,var(--sand) 25%,transparent 25%) 0 0/20px 14px repeat-x,
+  var(--sadu)}
+
+header .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+.brand svg{flex:none}
+.brand b{font-family:var(--display);font-size:1.7rem;color:var(--ink);line-height:1}
+.brand span{display:block;font-size:.78rem;color:var(--muted);letter-spacing:.12em}
+.right{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.lang{font-family:var(--body);font-size:.9rem;font-weight:600;color:var(--ink);background:transparent;border:1px solid var(--ink);border-radius:999px;padding:4px 14px;cursor:pointer;line-height:1.6}
+.lang:hover{background:var(--ink);color:var(--on-ink)}
+nav{display:flex;gap:22px;flex-wrap:wrap;font-size:.95rem}
+nav a{color:var(--fg);text-decoration:none}
+nav a:hover{color:var(--ink)}
+
+.hero{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(28px,5vw,64px);align-items:center;padding-block:clamp(36px,6vw,80px)}
+.hero>*{min-width:0}
+.hero h1{font-size:clamp(2rem,4.4vw,3.1rem);color:var(--fg)}
+.hero h1 em{font-style:normal;color:var(--ink)}
+.hero .lead{margin-top:18px;color:var(--muted);max-width:34rem}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:8px;font-weight:600;text-decoration:none;font-family:var(--body);font-size:1rem;border:1px solid var(--ink)}
+.btn.primary{background:var(--ink);color:var(--on-ink)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn:hover{filter:brightness(1.08)}
+
+.sheet{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.sheet-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line);font-size:.85rem;color:var(--muted)}
+.sheet-head b{color:var(--fg);font-size:.95rem}
+.row{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;padding:11px 18px;border-bottom:1px solid var(--line);font-size:.95rem}
+.row .id{font-size:.75rem;color:var(--muted);direction:ltr}
+.chip{font-size:.78rem;font-weight:600;padding:1px 10px;border-radius:999px;border:1px solid currentColor;white-space:nowrap}
+.chip.ok{color:var(--ok)}.chip.warn{color:var(--warn)}.chip.gap{color:var(--gap)}
+.meter{padding:14px 18px;background:var(--ink-soft);display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:.9rem}
+.meter strong{font-family:var(--display);font-size:1.6rem;color:var(--ink)}
+.note{font-size:.78rem;color:var(--muted);padding:8px 18px 12px}
+
+section{padding-block:clamp(48px,7vw,80px)}
+.sec-head{max-width:40rem;display:flex;flex-direction:column;gap:10px;margin-bottom:36px}
+.sec-head h2{font-size:clamp(1.6rem,3.2vw,2.2rem);color:var(--ink)}
+.sec-head p{color:var(--muted)}
+
+.facts{display:grid;grid-template-columns:repeat(3,1fr);border-block:1px solid var(--line)}
+.fact{padding-block:22px;padding-inline:0 24px;display:flex;flex-direction:column;gap:6px}
+.fact + .fact{border-inline-start:1px solid var(--line);padding-inline-start:24px}
+.fact strong{font-family:var(--display);font-size:2.2rem;color:var(--sadu);line-height:1.2}
+.fact span{color:var(--muted);font-size:.95rem}
+.src{margin-top:14px;font-size:.8rem;color:var(--muted)}
+
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.svc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.svc.featured{border-top:5px solid var(--ink)}
+.svc .tag{align-self:flex-start;font-size:.75rem;font-weight:600;color:var(--on-ink);background:var(--ink);padding:2px 10px;border-radius:999px}
+.svc h3{font-size:1.3rem}
+.svc p{color:var(--muted);font-size:.97rem}
+.svc ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-size:.95rem}
+.svc li{display:flex;gap:10px}
+.svc li::before{content:"";flex:none;width:8px;height:8px;margin-top:.75em;transform:rotate(45deg);background:var(--clay)}
+.svc .out{margin-top:auto;padding-top:14px;border-top:1px dashed var(--line);font-size:.88rem;color:var(--muted)}
+.svc .out b{color:var(--fg);font-weight:600}
+
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:s}
+.step{display:flex;flex-direction:column;gap:8px;padding-top:16px;border-top:3px solid var(--ink);min-width:0}
+.step::before{counter-increment:s;content:counter(s,arabic-indic);}
+[dir="ltr"] .step::before{content:counter(s);}
+.step::before{font-family:var(--display);font-size:1.2rem;color:var(--sadu)}
+.step h3{font-size:1.1rem}
+.step p{color:var(--muted);font-size:.95rem}
+
+.about{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px)}
+.about>*{min-width:0}
+.about p{color:var(--muted)}
+.creds{display:flex;flex-direction:column;border-top:1px solid var(--line);margin:0}
+.cred{display:grid;grid-template-columns:8.5rem 1fr;gap:16px;padding-block:14px;border-bottom:1px solid var(--line);font-size:.95rem}
+.cred dt{color:var(--muted);font-size:.85rem}
+.cred dd{margin:0}
+.fw{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.fw span{font-size:.78rem;padding:4px 10px;border:1px solid var(--line);border-radius:6px;direction:ltr;background:var(--surface)}
+
+.contact{background:var(--ink);color:var(--on-ink);border-radius:16px;overflow:hidden}
+.contact-in{padding:clamp(28px,5vw,56px);display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center}
+.contact-in>*{min-width:0}
+.contact h2{font-size:clamp(1.6rem,3vw,2.2rem)}
+.contact p{opacity:.85;margin-top:12px}
+.line{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid color-mix(in srgb,var(--on-ink) 30%,transparent);border-radius:10px;padding:12px 16px}
+.line div{display:flex;flex-direction:column;min-width:0}
+.line small{opacity:.75;font-size:.8rem}
+.line .v{direction:ltr;text-align:start;unicode-bidi:plaintext;user-select:all;overflow-wrap:anywhere}
+[dir="rtl"] .line .v{text-align:right}
+.copy{flex:none;background:var(--on-ink);color:var(--ink);border:0;border-radius:6px;padding:6px 12px;font-family:var(--body);font-weight:600;font-size:.85rem;cursor:pointer}
+footer{padding-block:28px;color:var(--muted);font-size:.85rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.disc{flex-basis:100%;font-size:.78rem;opacity:.85}
+.vision{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(28px,5vw,64px);align-items:start}
+.vision>*{min-width:0}
+.vision blockquote{margin:0;font-family:var(--display);font-size:clamp(1.4rem,2.8vw,1.9rem);line-height:1.6;color:var(--ink);border-inline-start:5px solid var(--sadu);padding-inline-start:20px}
+.mission{margin-top:22px;color:var(--muted)}
+.values{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line)}
+.val{padding-block:16px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:4px}
+.val h3{font-size:1.1rem;color:var(--fg)}
+.val p{color:var(--muted);font-size:.95rem}
+
+@media (max-width:860px){
+  .hero,.about,.contact-in,.vision{grid-template-columns:1fr}
+  .services{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .facts{grid-template-columns:1fr}
+  .fact,.fact + .fact{padding:18px 0;border-inline-start:0}
+  .fact + .fact{border-top:1px solid var(--line)}
+}
+@media (max-width:480px){
+  .steps{grid-template-columns:1fr}
+  .cred{grid-template-columns:1fr;gap:2px}
+  nav{display:none}
+  .right{gap:0}
+}
+</style>
+</head>
+<body>
+<div class="najdi" aria-hidden="true"></div>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" data-i-aria="brandAria" aria-label="درع للامتثال السيبراني">
+      <svg width="40" height="47" viewBox="0 0 120 140" aria-hidden="true">
+        <path d="M10 28 L20 10 L30 28 L40 10 L50 28 L60 10 L70 28 L80 10 L90 28 L100 10 L110 28 V68 C110 100 88 120 60 132 C32 120 10 100 10 68 Z" fill="var(--ink)"/>
+        <path d="M60 52 L84 80 L60 108 L36 80 Z" fill="var(--sand)"/>
+        <path d="M60 64 L74 80 L60 96 L46 80 Z" fill="var(--sadu)"/>
+      </svg>
+      <div><b data-i="brand">درع</b><span>DIR3 CYBER COMPLIANCE</span></div>
+    </a>
+    <div class="right">
+      <nav data-i-aria="navAria" aria-label="أقسام الصفحة">
+        <a href="#services" data-i="n1">الخدمات</a>
+        <a href="#process" data-i="n2">طريقة العمل</a>
+        <a href="#vision" data-i="n5">رؤيتنا</a>
+        <a href="#about" data-i="n3">من نحن</a>
+        <a href="#contact" data-i="n4">تواصل</a>
+      </nav>
+      <button class="lang" id="lang" type="button" lang="en">English</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div>
+      <p class="eyebrow" data-i="h_eye">امتثال وأمن سيبراني للمنشآت السعودية الصغيرة والمتوسطة</p>
+      <h1 style="margin-top:12px" data-i="h_t">جهّز منشأتك لنظام <em>حماية البيانات الشخصية</em> وضوابط الهيئة، قبل ما يوصلك الإشعار.</h1>
+      <p class="lead" data-i="h_lead">نقيّم وضع منشأتك مقابل نظام حماية البيانات الشخصية والضوابط الأساسية للأمن السيبراني، ونسلّمك خطة معالجة واضحة وسياسات جاهزة وملف أدلة تعتمد عليه مع الجهات والعملاء.</p>
+      <div class="cta">
+        <a class="btn primary" href="#contact" data-i="h_c1">احجز جلسة تقييم مبدئية</a>
+        <a class="btn ghost" href="#services" data-i="h_c2">شوف الخدمات</a>
+      </div>
+    </div>
+    <div class="sheet" data-i-aria="sheetAria" aria-label="مثال على ورقة تقييم الجاهزية">
+      <div class="sheet-head"><b data-i="sh_t">ورقة تقييم الجاهزية</b><span data-i="sh_ex">مثال توضيحي</span></div>
+      <div class="row"><span class="id">PDPL</span><span data-i="r1">سجل أنشطة المعالجة</span><span class="chip gap" data-i="gap">فجوة</span></div>
+      <div class="row"><span class="id">PDPL</span><span data-i="r2">إشعار الخصوصية والأساس النظامي</span><span class="chip warn" data-i="part">جزئي</span></div>
+      <div class="row"><span class="id">ECC</span><span data-i="r3">حوكمة الأمن السيبراني</span><span class="chip warn" data-i="part">جزئي</span></div>
+      <div class="row"><span class="id">ECC</span><span data-i="r4">تعزيز الأمن السيبراني</span><span class="chip ok" data-i="ok">مطبّق</span></div>
+      <div class="row"><span class="id">ECC</span><span data-i="r5">صمود الأمن السيبراني</span><span class="chip gap" data-i="gap">فجوة</span></div>
+      <div class="row"><span class="id">ECC</span><span data-i="r6">الأطراف الخارجية والحوسبة السحابية</span><span class="chip warn" data-i="part">جزئي</span></div>
+      <div class="meter"><span data-i="m_l">نسبة الجاهزية التقديرية</span><strong data-i="m_v">٤٢٪</strong></div>
+      <p class="note" data-i="sh_note">هذا شكل المخرج اللي تستلمه المنشأة بعد التقييم. الأرقام للتوضيح فقط.</p>
+    </div>
+  </div>
+
+  <div class="sadu" aria-hidden="true"></div>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow" data-i="w_eye">ليش الحين</p>
+        <h2 data-i="w_t">نظام حماية البيانات مطبّق فعلياً، والمخالفات بدأت تصدر</h2>
+      </div>
+      <div class="facts">
+        <div class="fact"><strong data-i="f1n">٤٨</strong><span data-i="f1">قرار مخالفة أعلنتها سدايا حتى يناير 2026 على متحكمين في قطاعات مختلفة.</span></div>
+        <div class="fact"><strong data-i="f2n">٥ ملايين</strong><span data-i="f2">ريال حدّ أعلى للغرامة، وفي بعض الحالات مسؤولية جنائية.</span></div>
+        <div class="fact"><strong data-i="f3n">نموذج تحقق</strong><span data-i="f3">بدأت سدايا ترسله للمتحكمين المسجلين، ويطلب أدلة على الحوكمة والأطراف الثالثة والاستجابة للحوادث.</span></div>
+      </div>
+      <p class="src" data-i="src">المصادر: إعلانات سدايا كما نقلتها وكالة الأنباء السعودية، وتحليلات Clyde &amp; Co (مارس ويوليو 2026).</p>
+    </div>
+  </section>
+
+  <section id="services" style="background:var(--surface)">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow" data-i="s_eye">الخدمات</p>
+        <h2 data-i="s_t">ثلاث خدمات بنطاق واضح ومخرجات محددة</h2>
+        <p data-i="s_p">السعر ثابت لكل خدمة ويتحدد حسب حجم المنشأة وعدد الأنظمة، وتعرفه قبل ما نبدأ.</p>
+      </div>
+      <div class="services">
+        <article class="svc featured">
+          <span class="tag" data-i="tag">الأكثر طلباً</span>
+          <h3 data-i="a_t">تقييم فجوات نظام حماية البيانات</h3>
+          <p data-i="a_p">للمنشأة اللي تتعامل مع بيانات عملاء أو موظفين وتبي تعرف وين واقفة.</p>
+          <ul>
+            <li data-i="a1">حصر البيانات الشخصية وأنشطة المعالجة</li>
+            <li data-i="a2">مراجعة الأساس النظامي وإشعارات الخصوصية</li>
+            <li data-i="a3">مراجعة الأطراف الثالثة ونقل البيانات خارج المملكة</li>
+            <li data-i="a4">مساعدة في تجهيز إجابات نموذج التحقق من سدايا</li>
+          </ul>
+          <p class="out" data-i="a_o"><b>تستلم:</b> تقرير فجوات، وسجل أنشطة معالجة، وخطة معالجة مرتبة بالأولوية.</p>
+        </article>
+        <article class="svc">
+          <h3 data-i="b_t">جاهزية الضوابط الأساسية ECC</h3>
+          <p data-i="b_p">للمنشآت اللي تتعامل مع جهات حكومية أو تُطلب منها مواءمة مع ضوابط الهيئة.</p>
+          <ul>
+            <li data-i="b1">تقييم حسب مكوّنات الضوابط الأساسية</li>
+            <li data-i="b2">سجل مخاطر بتقييم الاحتمالية والأثر</li>
+            <li data-i="b3">ربط الضوابط مع ISO/IEC 27001 عند الحاجة</li>
+            <li data-i="b4">خطة معالجة بالمسؤوليات والمدد</li>
+          </ul>
+          <p class="out" data-i="b_o"><b>تستلم:</b> تقرير تقييم، وسجل مخاطر وخريطة حرارية، وخطة معالجة.</p>
+        </article>
+        <article class="svc">
+          <h3 data-i="c_t">السياسات وملف الأدلة</h3>
+          <p data-i="c_p">للمنشأة اللي يطلب منها عملاؤها أو شركة التأمين استبيانات أمنية.</p>
+          <ul>
+            <li data-i="c1">كتابة السياسات والإجراءات بالعربي والإنجليزي</li>
+            <li data-i="c2">تجهيز ملف أدلة منظم للضوابط</li>
+            <li data-i="c3">تعبئة استبيانات الموردين واستمارات التأمين السيبراني</li>
+            <li data-i="c4">إجابات قابلة لإعادة الاستخدام في الاستبيانات القادمة</li>
+          </ul>
+          <p class="out" data-i="c_o"><b>تستلم:</b> حزمة سياسات، وملف أدلة، ومكتبة إجابات جاهزة.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow" data-i="p_eye">طريقة العمل</p>
+        <h2 data-i="p_t">من أول مكالمة لين التسليم</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><h3 data-i="p1t">جلسة تعريفية</h3><p data-i="p1">30 دقيقة نفهم فيها نشاطك وبياناتك والجهات اللي تتعامل معها، ونحدد الخدمة المناسبة.</p></div>
+        <div class="step"><h3 data-i="p2t">جمع المعلومات</h3><p data-i="p2">مقابلات قصيرة مع فريقك ومراجعة الوثائق والأنظمة الموجودة.</p></div>
+        <div class="step"><h3 data-i="p3t">التقييم والتحليل</h3><p data-i="p3">مقارنة الوضع الحالي بمتطلبات النظام والضوابط، وتقييم المخاطر لكل فجوة.</p></div>
+        <div class="step"><h3 data-i="p4t">التسليم والمتابعة</h3><p data-i="p4">عرض النتائج، وتسليم التقرير والخطة، ومتابعة لمدة أسبوعين للأسئلة.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="vision" style="background:var(--surface)">
+    <div class="wrap vision">
+      <div>
+        <p class="eyebrow" data-i="v_eye">رؤيتنا</p>
+        <blockquote style="margin-top:12px" data-i="v_q">أن تحمي كل منشأة سعودية صغيرة ومتوسطة بيانات عملائها، وتثبت امتثالها بثقة، بدون تعقيد ولا تكاليف الشركات الكبرى.</blockquote>
+        <p class="mission" data-i="v_m"><b>رسالتنا:</b> نحوّل الأنظمة والضوابط السعودية والدولية إلى خطوات عملية واضحة، ونسلّم مخرجات تعتمد عليها المنشأة أمام الجهات والعملاء وشركات التأمين.</p>
+      </div>
+      <div class="values">
+        <div class="val"><h3 data-i="v1t">الوضوح</h3><p data-i="v1">نطاق محدد وسعر معروف قبل البداية، ولغة يفهمها صاحب القرار.</p></div>
+        <div class="val"><h3 data-i="v2t">الأمانة</h3><p data-i="v2">نقول وضع المنشأة كما هو، وما نعد بامتثال كامل لا نملك ضمانه.</p></div>
+        <div class="val"><h3 data-i="v3t">السرية</h3><p data-i="v3">اتفاقية عدم إفصاح مع كل عميل، وبياناتك ما تُستخدم لغير المشروع.</p></div>
+        <div class="val"><h3 data-i="v4t">أصالة العمل</h3><p data-i="v4">كل تقرير وسياسة نكتبها من الصفر لمنشأتك، لا قوالب منسوخة.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sadu" aria-hidden="true"></div>
+
+  <section id="about">
+    <div class="wrap about">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow" data-i="ab_eye">من نحن</p>
+        <h2 data-i="ab_t">خبرة سعودية في الضوابط المحلية والدولية</h2>
+        <p data-i="ab_p">درع علامة سعودية متخصصة في الامتثال السيبراني وحماية البيانات. المستشارة الرئيسية حاصلة على ماجستير الأمن السيبراني والخصوصية والثقة من جامعة إدنبرة، إحدى أفضل 30 جامعة في العالم، وتخصصت رسالتها في تحليل الاستبيانات الأمنية واستمارات التأمين السيبراني ومقارنتها بالضوابط السعودية والدولية، ولها ورقة علمية مع جامعة إدنبرة في أمن الأطراف الثالثة وسلاسل الإمداد. يعني نعرف بالضبط وش يُسأل عنه وكيف يُجاوب عليه.</p>
+        <div class="fw">
+          <span>NCA ECC-2:2024</span><span>Saudi PDPL</span><span>ISO/IEC 27001:2022</span><span>SAMA CSF</span><span>NIST CSF</span>
+        </div>
+      </div>
+      <dl class="creds">
+        <div class="cred"><dt data-i="cr1t">التعليم</dt><dd data-i="cr1">ماجستير الأمن السيبراني والخصوصية والثقة من جامعة إدنبرة في المملكة المتحدة، المصنفة ضمن أفضل 30 جامعة في العالم (Times Higher Education 2026)</dd></div>
+        <div class="cred"><dt data-i="cr2t">الشهادات</dt><dd data-i="cr2">شهادة دولية في الأمن السيبراني</dd></div>
+        <div class="cred"><dt data-i="cr3t">البحث العلمي</dt><dd data-i="cr3">ورقة علمية مع جامعة إدنبرة في أمن الأطراف الثالثة وسلاسل الإمداد</dd></div>
+        <div class="cred"><dt data-i="cr4t">الخبرة</dt><dd data-i="cr4">دعم تقني لأنظمة مجموعة متنوعة الأنشطة، وتدريب تقني في قطاع مصرفي خاضع لساما</dd></div>
+        <div class="cred"><dt data-i="cr5t">مشروع منشور</dt><dd data-i="cr5">تقييم مخاطر كامل لمجموعة تجارية: 93 ضابط ISO وربط 28 مكوّن فرعي من ECC</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="contact" style="padding-top:0">
+    <div class="wrap">
+      <div class="contact">
+        <div class="najdi" aria-hidden="true" style="--bg:var(--ink);background-color:var(--clay)"></div>
+        <div class="contact-in">
+          <div>
+            <h2 data-i="ct_t">جلسة التقييم المبدئية مجانية</h2>
+            <p data-i="ct_p">أرسل لنا على البريد نوع نشاطك وعدد موظفيك تقريباً، ونرجع لك خلال يوم عمل بموعد.</p>
+          </div>
+          <div class="line"><div><small data-i="ct_l">البريد</small><span class="v" id="v-mail">contact@dir3cyber.com</span></div><button class="copy" type="button" data-t="v-mail" data-i="copy">نسخ</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <span data-i="ft1">© 2026 درع للامتثال السيبراني</span>
+  <span data-i="ft2">المملكة العربية السعودية</span>
+  <span class="disc" data-i="disc">خدمات درع استشارية فنية في الامتثال والأمن السيبراني، ولا تُعد استشارة قانونية. تطبيق التوصيات مسؤولية المنشأة.</span>
+</footer>
+
+<script>
+(function(){
+var EN={
+brandAria:"Dir3 Cyber Compliance",navAria:"Page sections",sheetAria:"Sample readiness assessment sheet",
+brand:"Dir3",n1:"Services",n2:"How we work",n5:"Vision",n3:"About",n4:"Contact",
+h_eye:"Cyber compliance for Saudi small and medium enterprises",
+h_t:"Get your business ready for the <em>Personal Data Protection Law</em> and NCA controls, before the notice arrives.",
+h_lead:"We assess your organisation against the Saudi PDPL and the NCA Essential Cybersecurity Controls, then hand you a clear remediation plan, ready-to-use policies and an evidence file you can rely on with regulators and clients.",
+h_c1:"Book an initial assessment",h_c2:"View services",
+sh_t:"Readiness assessment sheet",sh_ex:"Illustrative example",
+r1:"Record of processing activities",r2:"Privacy notice and lawful basis",r3:"Cybersecurity governance",r4:"Cybersecurity defence",r5:"Cybersecurity resilience",r6:"Third-party and cloud security",
+gap:"Gap",part:"Partial",ok:"In place",m_l:"Estimated readiness",m_v:"42%",
+sh_note:"This is the kind of output you receive after the assessment. Figures are illustrative only.",
+w_eye:"Why now",w_t:"The PDPL is being enforced, and penalties are already being issued",
+f1n:"48",f1:"enforcement decisions announced by SDAIA through January 2026 against controllers across sectors.",
+f2n:"SAR 5M",f2:"maximum fine, with possible criminal liability in some cases.",
+f3n:"Verification form",f3:"SDAIA has begun sending it to registered controllers, requesting evidence on governance, third parties and incident response.",
+src:"Sources: SDAIA announcements as reported by the Saudi Press Agency, and Clyde &amp; Co analysis (March and July 2026).",
+s_eye:"Services",s_t:"Three services with a clear scope and defined deliverables",s_p:"Each service has a fixed price based on your organisation's size and number of systems, agreed before we start.",
+tag:"Most requested",
+a_t:"PDPL gap assessment",a_p:"For organisations that handle customer or employee data and need to know where they stand.",
+a1:"Personal data and processing activity inventory",a2:"Review of lawful basis and privacy notices",a3:"Review of third parties and cross-border data transfers",a4:"Support preparing answers to the SDAIA verification form",
+a_o:"<b>You receive:</b> a gap report, a record of processing activities and a prioritised remediation plan.",
+b_t:"NCA ECC readiness",b_p:"For organisations working with government entities or asked to align with NCA controls.",
+b1:"Assessment against the ECC domains",b2:"Risk register with likelihood and impact ratings",b3:"Mapping to ISO/IEC 27001 where needed",b4:"Remediation plan with owners and timelines",
+b_o:"<b>You receive:</b> an assessment report, a risk register with heat map, and a remediation plan.",
+c_t:"Policies and evidence file",c_p:"For organisations asked by clients or insurers to complete security questionnaires.",
+c1:"Policies and procedures in Arabic and English",c2:"A structured evidence file for each control",c3:"Completion of vendor security questionnaires and cyber-insurance proposal forms",c4:"Reusable answers for future questionnaires",
+c_o:"<b>You receive:</b> a policy pack, an evidence file and a ready answer library.",
+p_eye:"How we work",p_t:"From first call to delivery",
+p1t:"Discovery call",p1:"30 minutes to understand your business, your data and the entities you work with, and to agree the right service.",
+p2t:"Information gathering",p2:"Short interviews with your team and a review of existing documents and systems.",
+p3t:"Assessment and analysis",p3:"Comparing your current state with regulatory and control requirements, and rating the risk of each gap.",
+p4t:"Delivery and follow-up",p4:"Presenting the findings, handing over the report and plan, and two weeks of follow-up for questions.",
+v_eye:"Our vision",v_q:"Every Saudi small and medium enterprise protecting its customers' data and demonstrating compliance with confidence, without the complexity or cost of large consultancies.",
+v_m:"<b>Our mission:</b> to turn Saudi and international regulations and controls into clear, practical steps, and to deliver outputs an organisation can rely on with regulators, clients and insurers.",
+v1t:"Clarity",v1:"A defined scope and a known price before we begin, in language decision-makers understand.",
+v2t:"Integrity",v2:"We report your position as it is, and never promise full compliance we cannot guarantee.",
+v3t:"Confidentiality",v3:"A non-disclosure agreement with every client; your data is used for your engagement only.",
+v4t:"Original work",v4:"Every report and policy is written from scratch for your organisation, never copied templates.",
+ab_eye:"About",ab_t:"Saudi expertise in local and international frameworks",
+ab_p:"Dir3 is a Saudi brand specialising in cyber compliance and data protection. Our lead consultant holds an MSc in Cyber Security, Privacy and Trust from the University of Edinburgh, ranked among the world's top 30 universities. Her dissertation analysed security questionnaires and cyber-insurance proposal forms against Saudi and international frameworks, and she has a research paper with the University of Edinburgh on third-party and supply-chain security. In short, we know exactly what is being asked and how to answer it.",
+cr1t:"Education",cr1:"MSc Cyber Security, Privacy and Trust, University of Edinburgh, United Kingdom, ranked in the world's top 30 (Times Higher Education 2026)",
+cr2t:"Certification",cr2:"International cybersecurity certification",
+cr3t:"Research",cr3:"Research paper with the University of Edinburgh on third-party and supply-chain security",
+cr4t:"Experience",cr4:"Technical support for a diversified business group's systems, and technical training in a SAMA-regulated banking sector",
+cr5t:"Published project",cr5:"Full risk assessment for a commercial group: 93 ISO controls mapped to 28 ECC subdomains",
+ct_t:"The initial assessment session is free",ct_p:"Email us your type of business and approximate number of employees, and we will reply within one working day with a time.",
+ct_l:"Email",copy:"Copy",copied:"Copied",
+ft1:"© 2026 Dir3 Cyber Compliance",ft2:"Kingdom of Saudi Arabia",
+disc:"Dir3 provides technical consulting in cyber compliance and security and does not provide legal advice. Implementing recommendations is the client's responsibility.",
+title:"Dir3 Cyber Compliance",desc:"Dir3 Cyber Compliance prepares Saudi SMEs for the Personal Data Protection Law (PDPL) and the NCA Essential Cybersecurity Controls."
+};
+var AR={copied:"تم النسخ"}, root=document.documentElement, cur="ar";
+var nodes=document.querySelectorAll("[data-i]"), arias=document.querySelectorAll("[data-i-aria]");
+var md=document.querySelector('meta[name="description"]');
+nodes.forEach(function(n){AR[n.dataset.i]=n.innerHTML});
+arias.forEach(function(n){AR[n.dataset.iAria]=n.getAttribute("aria-label")});
+AR.title=document.title; AR.desc=md?md.content:"";
+var btn=document.getElementById("lang");
+function setLang(l){
+  var D=l==="en"?EN:AR; cur=l;
+  root.lang=l; root.dir=l==="en"?"ltr":"rtl";
+  nodes.forEach(function(n){var v=D[n.dataset.i]; if(v!=null) n.innerHTML=v});
+  arias.forEach(function(n){var v=D[n.dataset.iAria]; if(v!=null) n.setAttribute("aria-label",v)});
+  document.title=D.title; if(md) md.content=D.desc;
+  btn.textContent=l==="en"?"العربية":"English"; btn.lang=l==="en"?"ar":"en";
+  try{localStorage.setItem("dir3-lang",l)}catch(e){}
+}
+var start="ar";
+try{var q=new URLSearchParams(location.search).get("lang"); if(q==="en"||q==="ar") start=q; else if(localStorage.getItem("dir3-lang")==="en") start="en";}catch(e){}
+setLang(start);
+btn.addEventListener("click",function(){setLang(cur==="en"?"ar":"en")});
+document.querySelectorAll(".copy").forEach(function(b){
+  b.addEventListener("click",function(){
+    var el=document.getElementById(b.dataset.t), txt=el.textContent.trim();
+    var D=cur==="en"?EN:AR;
+    var done=function(){b.textContent=D.copied;setTimeout(function(){b.textContent=D.copy},1600)};
+    try{navigator.clipboard.writeText(txt).then(done,function(){sel(el)})}catch(e){sel(el)}
+  });
+});
+function sel(el){var r=document.createRange();r.selectNodeContents(el);var s=window.getSelection();s.removeAllRanges();s.addRange(r)}
+})();
+</script>
+</body>
+</html>
